@@ -1,0 +1,39 @@
+.testimonial__image{
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 5rem;
+    
+
+}
+
+.testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem;
+    padding: 5rem;
+    height: 70rem;
+    /* width: 100rem; */
+}
+
+.testimonial__name{
+    font-size: 3rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+.testimonial__foundation{
+    color: black;
+}
+
+.testimonials .quote2{
+    font-size: 2.5rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+

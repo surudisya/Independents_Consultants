@@ -1,0 +1,12 @@
+.container2{
+    padding: 0;
+}
+
+.block2{
+    margin: 2rem 0;
+    padding: 5rem 0;
+}
+
+.block2 .block__heading{
+    color: black;
+}
