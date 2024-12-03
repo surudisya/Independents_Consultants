@@ -1,21 +1,11 @@
-.hero{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 0 0rem 0; */
-    /* margin-bottom: 2rem; */
-
+/* .hero{
     position: relative;
     left: 0;
-    /* right: 0; */
     background-image: url('../../assets/HeroImage.jpg');
-    /* background-image: url(../../assets/); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
-
 }
 
 .hero__heading{
@@ -50,13 +40,12 @@
 .hero__header{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 15rem 0 5rem 0rem;
+    padding: 50% 0;
     position: relative;
     z-index: 10;
 }
-
-
 
 .btn__start{
     display: flex;
@@ -70,7 +59,6 @@
     box-shadow: none;
     background-color: var(--color-secondary);
 }
-
 
 @media screen and (min-width: 768px){
     .hero{
@@ -111,7 +99,6 @@
         text-align: center;
     }
 
-
     .btn__start{
         display: flex;
         justify-content: left;
@@ -129,7 +116,6 @@
         align-items: flex-start;
     }
     .hero__images{
-        /* padding: 0 3.5rem; */
     }
 }
 
@@ -153,9 +139,145 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
-    /* width: 100%;
-    height: 100%; */
     left: 0;
     right: 0;
+    z-index: 10;
+} */
+
+
+/* Parallel Website Effects */
+
+/* .hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+    color: #fff;
+    background: url('../../assets/buiding.jpg');
+    background-repeat: no-repeat;
+
+
+  }
+  
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: 10;
+  }
+  
+  .hero__header {
+    position: relative;
+    z-index: 15;
+    text-align: center;
+  }
+   */
+
+   /* General Hero Styles */
+.hero {
+    position: relative;
+    height: 125vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #fff;
+  }
+  
+  .hero__content {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5rem;
+
+  }
+  
+  .hero__heading {
+    font-size: 6.5rem;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    text-align: center;  
+    font-weight: bolder;  
+    transition: all 0.1s ease-in;
+  }
+  
+  .hero__subheading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Parallax Layers */
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 0;
+  }
+  
+  .parallax-layer--back {
+    z-index: 1;
+    background-image: url('../../assets/newbg.jpg');
+  }
+  
+  .parallax-layer--middle {
+    z-index: 2;
+    background-image: url('../../assets/jax.webp');
+    position: absolute;
+    top: 80px;
+  }
+  
+  .parallax-layer--front {
     z-index: 5;
-}
+    background-image: url('../../assets/foreground-front.webp');
+    mix-blend-mode: multiply; 
+  }
+  
+/* 
+ .hero__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 4rem 0;
+      padding: 2rem;  
+   }
+
+   .hero__heading{
+    font-size: 6rem;
+    line-height: 1.2;
+   }
+
+   .btn--oval{
+      font-size: 2rem;
+      margin: 1.8rem 0;
+      transition: background-color 0.15s ease-in;
+   }
+
+   .btn--oval:hover{
+    background-color: #0797e9;
+    box-shadow: none; 
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    .hero__heading{
+      font-size: 7.5rem;
+     }
+  }  */

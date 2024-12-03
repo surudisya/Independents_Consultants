@@ -15,29 +15,69 @@ const Navbar = () => {
         mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     } 
 
+    // Variants for menu animation
+  const menuVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.1,
+        ease: 'easeOut',
+        staggerChildren: 0.2,   
+      },
+    },
+  };
+
+  const logoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+    //   rotate: [0, 10, -10, 0], // Add a subtle wobble effect
+      transition: { duration: 0.5, ease: 'easeIn' },
+    },
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 5 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
+
   return (  
 
         <nav className='container'>
-            <img src={logo} alt="Company Logo" className='logo' />
-              <ul className={mobileMenu?'' : 'hide-mobile-menu'}>
-                  <li>
-                      <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                      <Link to="/service">Services</Link>
-                  </li>
-                  <li>
-                      <Link to="/">About Us</Link>
-                  </li>
-                  <li>
-                      <Link to="/services">Testimonials</Link>
-                  </li>
-                  <li><a href="#contact"><button className="btn btn--primary">Get in Touch</button></a></li>
-                </ul>
-            <img src={menu} alt="menu" className='menu' onClick={toggleMenu} />
+            <motion.img src={logo} alt="Company Logo"
+                        className='logo' 
+                        variants={logoVariants}
+                        initial="hidden"
+                        animate="visible"
+            />
+            <motion.ul
+                    className={mobileMenu ? '' : 'hide-mobile-menu'}
+                    variants={menuVariants}
+                    initial="hidden"
+                    animate="visible"
+            >
+            <motion.li variants={itemVariants}>
+            <Link to="/" className='navbar__list'>Home</Link>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+            <Link to="/service" className='navbar__list'>Services</Link>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+            <Link to="/" className='navbar__list'>About Us</Link>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+            <Link to="/services" className='navbar__list'>Testimonials</Link>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+            <a href="#contact">
+                <button className="btn btn--primary">Get in Touch</button>
+            </a>
+            </motion.li>
+        </motion.ul>
+            <motion.img src={menu} alt="menu" className='menu' onClick={toggleMenu} />
         </nav>
-
-
   )
 }
 

@@ -5,6 +5,7 @@ import Cards from '../Cards/Cards'
 import ContactForm from '../ContactForm/ContactForm'
 import Testimonials from '../Testimonials/Testimonials'
 import Founder from '../Founder/Founder'
+import Mission from '../Mission/Mission'
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
         <Cards />
         <Founder/>
         <Testimonials/>
-
+        <Mission />
         <ContactForm />
 
     </div>

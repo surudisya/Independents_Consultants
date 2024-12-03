@@ -20,6 +20,9 @@ const Founder = () => {
             </div>
             <div className="founder__photo">
                 <img src={owner} alt="CEO Profile" className='profile' />
+                <div className="colors color-one"></div>
+                <div className="colors color-two"></div>
+                <div className="colors color-three"></div>
             </div>
             
         </div>
